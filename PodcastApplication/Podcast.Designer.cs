@@ -30,14 +30,21 @@
         {
             this.labelPodcast = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxCategory = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBoxEpisode = new System.Windows.Forms.ListBox();
+            this.textBoxURL = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.comboBoxFrekvens = new System.Windows.Forms.ComboBox();
+            this.buttonDeletePodcast = new System.Windows.Forms.Button();
+            this.buttonSavePodcast = new System.Windows.Forms.Button();
+            this.listBoxPodcast = new System.Windows.Forms.ListBox();
+            this.buttonNewPodcast = new System.Windows.Forms.Button();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.buttonDeleteCategory = new System.Windows.Forms.Button();
+            this.buttonSaveCategory = new System.Windows.Forms.Button();
+            this.buttonNewCatefory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,95 +63,165 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.listBox2);
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonDeleteCategory);
+            this.panel1.Controls.Add(this.buttonSaveCategory);
+            this.panel1.Controls.Add(this.buttonNewCatefory);
+            this.panel1.Controls.Add(this.textBoxCategory);
+            this.panel1.Controls.Add(this.listBoxCategory);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.listBoxEpisode);
+            this.panel1.Controls.Add(this.textBoxURL);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comboBoxCategory);
+            this.panel1.Controls.Add(this.comboBoxFrekvens);
+            this.panel1.Controls.Add(this.buttonDeletePodcast);
+            this.panel1.Controls.Add(this.buttonSavePodcast);
+            this.panel1.Controls.Add(this.listBoxPodcast);
+            this.panel1.Controls.Add(this.buttonNewPodcast);
             this.panel1.Controls.Add(this.labelPodcast);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(921, 546);
+            this.panel1.Size = new System.Drawing.Size(1063, 611);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // listBoxCategory
             // 
-            this.button1.Location = new System.Drawing.Point(102, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ny...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.listBoxCategory.FormattingEnabled = true;
+            this.listBoxCategory.ItemHeight = 16;
+            this.listBoxCategory.Location = new System.Drawing.Point(665, 89);
+            this.listBoxCategory.Name = "listBoxCategory";
+            this.listBoxCategory.Size = new System.Drawing.Size(361, 164);
+            this.listBoxCategory.TabIndex = 13;
             // 
-            // listBox1
+            // label3
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(29, 89);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(413, 164);
-            this.listBox1.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(661, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Kategorier:";
             // 
-            // listBox2
+            // listBoxEpisode
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(29, 387);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(413, 116);
-            this.listBox2.TabIndex = 3;
+            this.listBoxEpisode.FormattingEnabled = true;
+            this.listBoxEpisode.ItemHeight = 16;
+            this.listBoxEpisode.Location = new System.Drawing.Point(29, 374);
+            this.listBoxEpisode.Name = "listBoxEpisode";
+            this.listBoxEpisode.Size = new System.Drawing.Size(603, 196);
+            this.listBoxEpisode.TabIndex = 11;
             // 
-            // button2
+            // textBoxURL
             // 
-            this.button2.Location = new System.Drawing.Point(222, 336);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 36);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Spara";
-            this.button2.UseVisualStyleBackColor = true;
+            this.textBoxURL.Location = new System.Drawing.Point(79, 275);
+            this.textBoxURL.Name = "textBoxURL";
+            this.textBoxURL.Size = new System.Drawing.Size(197, 22);
+            this.textBoxURL.TabIndex = 10;
             // 
-            // button3
+            // label2
             // 
-            this.button3.Location = new System.Drawing.Point(343, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 36);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Ta bort...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 275);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "URL:";
             // 
-            // comboBox1
+            // comboBoxCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 288);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 24);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Location = new System.Drawing.Point(470, 273);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(162, 24);
+            this.comboBoxCategory.TabIndex = 7;
             // 
-            // comboBox2
+            // comboBoxFrekvens
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(280, 288);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 24);
-            this.comboBox2.TabIndex = 7;
+            this.comboBoxFrekvens.FormattingEnabled = true;
+            this.comboBoxFrekvens.Location = new System.Drawing.Point(291, 273);
+            this.comboBoxFrekvens.Name = "comboBoxFrekvens";
+            this.comboBoxFrekvens.Size = new System.Drawing.Size(162, 24);
+            this.comboBoxFrekvens.TabIndex = 6;
             // 
-            // label1
+            // buttonDeletePodcast
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(485, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.buttonDeletePodcast.Location = new System.Drawing.Point(533, 314);
+            this.buttonDeletePodcast.Name = "buttonDeletePodcast";
+            this.buttonDeletePodcast.Size = new System.Drawing.Size(99, 36);
+            this.buttonDeletePodcast.TabIndex = 5;
+            this.buttonDeletePodcast.Text = "Ta bort...";
+            this.buttonDeletePodcast.UseVisualStyleBackColor = true;
+            // 
+            // buttonSavePodcast
+            // 
+            this.buttonSavePodcast.Location = new System.Drawing.Point(412, 314);
+            this.buttonSavePodcast.Name = "buttonSavePodcast";
+            this.buttonSavePodcast.Size = new System.Drawing.Size(99, 36);
+            this.buttonSavePodcast.TabIndex = 4;
+            this.buttonSavePodcast.Text = "Spara";
+            this.buttonSavePodcast.UseVisualStyleBackColor = true;
+            // 
+            // listBoxPodcast
+            // 
+            this.listBoxPodcast.FormattingEnabled = true;
+            this.listBoxPodcast.ItemHeight = 16;
+            this.listBoxPodcast.Location = new System.Drawing.Point(29, 89);
+            this.listBoxPodcast.Name = "listBoxPodcast";
+            this.listBoxPodcast.Size = new System.Drawing.Size(603, 164);
+            this.listBoxPodcast.TabIndex = 2;
+            // 
+            // buttonNewPodcast
+            // 
+            this.buttonNewPodcast.Location = new System.Drawing.Point(292, 314);
+            this.buttonNewPodcast.Name = "buttonNewPodcast";
+            this.buttonNewPodcast.Size = new System.Drawing.Size(99, 36);
+            this.buttonNewPodcast.TabIndex = 1;
+            this.buttonNewPodcast.Text = "Ny...";
+            this.buttonNewPodcast.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.Location = new System.Drawing.Point(665, 275);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(361, 22);
+            this.textBoxCategory.TabIndex = 15;
+            // 
+            // buttonDeleteCategory
+            // 
+            this.buttonDeleteCategory.Location = new System.Drawing.Point(917, 314);
+            this.buttonDeleteCategory.Name = "buttonDeleteCategory";
+            this.buttonDeleteCategory.Size = new System.Drawing.Size(99, 36);
+            this.buttonDeleteCategory.TabIndex = 18;
+            this.buttonDeleteCategory.Text = "Ta bort...";
+            this.buttonDeleteCategory.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveCategory
+            // 
+            this.buttonSaveCategory.Location = new System.Drawing.Point(796, 314);
+            this.buttonSaveCategory.Name = "buttonSaveCategory";
+            this.buttonSaveCategory.Size = new System.Drawing.Size(99, 36);
+            this.buttonSaveCategory.TabIndex = 17;
+            this.buttonSaveCategory.Text = "Spara";
+            this.buttonSaveCategory.UseVisualStyleBackColor = true;
+            // 
+            // buttonNewCatefory
+            // 
+            this.buttonNewCatefory.Location = new System.Drawing.Point(676, 314);
+            this.buttonNewCatefory.Name = "buttonNewCatefory";
+            this.buttonNewCatefory.Size = new System.Drawing.Size(99, 36);
+            this.buttonNewCatefory.TabIndex = 16;
+            this.buttonNewCatefory.Text = "Ny...";
+            this.buttonNewCatefory.UseVisualStyleBackColor = true;
             // 
             // Podcast
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 523);
+            this.ClientSize = new System.Drawing.Size(1054, 600);
             this.Controls.Add(this.panel1);
             this.Name = "Podcast";
             this.Text = "Podcast Application";
@@ -158,14 +235,21 @@
 
         private System.Windows.Forms.Label labelPodcast;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
+        private System.Windows.Forms.ComboBox comboBoxFrekvens;
+        private System.Windows.Forms.Button buttonDeletePodcast;
+        private System.Windows.Forms.Button buttonSavePodcast;
+        private System.Windows.Forms.ListBox listBoxPodcast;
+        private System.Windows.Forms.Button buttonNewPodcast;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxURL;
+        private System.Windows.Forms.ListBox listBoxEpisode;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBoxCategory;
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.Button buttonDeleteCategory;
+        private System.Windows.Forms.Button buttonSaveCategory;
+        private System.Windows.Forms.Button buttonNewCatefory;
     }
 }
 
