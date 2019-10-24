@@ -17,6 +17,7 @@ namespace PodcastApplication
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Podcast());
+            Console.WriteLine("test commit");
         }
     }
 }
