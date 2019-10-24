@@ -30,6 +30,15 @@
         {
             this.labelPodcast = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listViewPodcast = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonDeleteCategory = new System.Windows.Forms.Button();
+            this.buttonSaveCategory = new System.Windows.Forms.Button();
+            this.buttonNewCatefory = new System.Windows.Forms.Button();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
             this.listBoxCategory = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxEpisode = new System.Windows.Forms.ListBox();
@@ -41,10 +50,6 @@
             this.buttonSavePodcast = new System.Windows.Forms.Button();
             this.listBoxPodcast = new System.Windows.Forms.ListBox();
             this.buttonNewPodcast = new System.Windows.Forms.Button();
-            this.textBoxCategory = new System.Windows.Forms.TextBox();
-            this.buttonDeleteCategory = new System.Windows.Forms.Button();
-            this.buttonSaveCategory = new System.Windows.Forms.Button();
-            this.buttonNewCatefory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.listViewPodcast);
             this.panel1.Controls.Add(this.buttonDeleteCategory);
             this.panel1.Controls.Add(this.buttonSaveCategory);
             this.panel1.Controls.Add(this.buttonNewCatefory);
@@ -83,6 +89,75 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 611);
             this.panel1.TabIndex = 1;
+            // 
+            // listViewPodcast
+            // 
+            this.listViewPodcast.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewPodcast.HideSelection = false;
+            this.listViewPodcast.Location = new System.Drawing.Point(29, 89);
+            this.listViewPodcast.Name = "listViewPodcast";
+            this.listViewPodcast.Size = new System.Drawing.Size(603, 164);
+            this.listViewPodcast.TabIndex = 19;
+            this.listViewPodcast.UseCompatibleStateImageBehavior = false;
+            this.listViewPodcast.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Avsnitt";
+            this.columnHeader1.Width = 86;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Namn";
+            this.columnHeader2.Width = 95;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Frekvens";
+            this.columnHeader3.Width = 96;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Kategori";
+            this.columnHeader4.Width = 87;
+            // 
+            // buttonDeleteCategory
+            // 
+            this.buttonDeleteCategory.Location = new System.Drawing.Point(927, 314);
+            this.buttonDeleteCategory.Name = "buttonDeleteCategory";
+            this.buttonDeleteCategory.Size = new System.Drawing.Size(99, 36);
+            this.buttonDeleteCategory.TabIndex = 18;
+            this.buttonDeleteCategory.Text = "Ta bort...";
+            this.buttonDeleteCategory.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveCategory
+            // 
+            this.buttonSaveCategory.Location = new System.Drawing.Point(796, 314);
+            this.buttonSaveCategory.Name = "buttonSaveCategory";
+            this.buttonSaveCategory.Size = new System.Drawing.Size(99, 36);
+            this.buttonSaveCategory.TabIndex = 17;
+            this.buttonSaveCategory.Text = "Spara";
+            this.buttonSaveCategory.UseVisualStyleBackColor = true;
+            // 
+            // buttonNewCatefory
+            // 
+            this.buttonNewCatefory.Location = new System.Drawing.Point(665, 314);
+            this.buttonNewCatefory.Name = "buttonNewCatefory";
+            this.buttonNewCatefory.Size = new System.Drawing.Size(99, 36);
+            this.buttonNewCatefory.TabIndex = 16;
+            this.buttonNewCatefory.Text = "Ny...";
+            this.buttonNewCatefory.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.Location = new System.Drawing.Point(665, 275);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(361, 22);
+            this.textBoxCategory.TabIndex = 15;
             // 
             // listBoxCategory
             // 
@@ -164,6 +239,7 @@
             this.buttonSavePodcast.TabIndex = 4;
             this.buttonSavePodcast.Text = "Spara";
             this.buttonSavePodcast.UseVisualStyleBackColor = true;
+            this.buttonSavePodcast.Click += new System.EventHandler(this.ButtonSavePodcast_Click);
             // 
             // listBoxPodcast
             // 
@@ -182,40 +258,7 @@
             this.buttonNewPodcast.TabIndex = 1;
             this.buttonNewPodcast.Text = "Ny...";
             this.buttonNewPodcast.UseVisualStyleBackColor = true;
-            // 
-            // textBoxCategory
-            // 
-            this.textBoxCategory.Location = new System.Drawing.Point(665, 275);
-            this.textBoxCategory.Name = "textBoxCategory";
-            this.textBoxCategory.Size = new System.Drawing.Size(361, 22);
-            this.textBoxCategory.TabIndex = 15;
-            // 
-            // buttonDeleteCategory
-            // 
-            this.buttonDeleteCategory.Location = new System.Drawing.Point(917, 314);
-            this.buttonDeleteCategory.Name = "buttonDeleteCategory";
-            this.buttonDeleteCategory.Size = new System.Drawing.Size(99, 36);
-            this.buttonDeleteCategory.TabIndex = 18;
-            this.buttonDeleteCategory.Text = "Ta bort...";
-            this.buttonDeleteCategory.UseVisualStyleBackColor = true;
-            // 
-            // buttonSaveCategory
-            // 
-            this.buttonSaveCategory.Location = new System.Drawing.Point(796, 314);
-            this.buttonSaveCategory.Name = "buttonSaveCategory";
-            this.buttonSaveCategory.Size = new System.Drawing.Size(99, 36);
-            this.buttonSaveCategory.TabIndex = 17;
-            this.buttonSaveCategory.Text = "Spara";
-            this.buttonSaveCategory.UseVisualStyleBackColor = true;
-            // 
-            // buttonNewCatefory
-            // 
-            this.buttonNewCatefory.Location = new System.Drawing.Point(676, 314);
-            this.buttonNewCatefory.Name = "buttonNewCatefory";
-            this.buttonNewCatefory.Size = new System.Drawing.Size(99, 36);
-            this.buttonNewCatefory.TabIndex = 16;
-            this.buttonNewCatefory.Text = "Ny...";
-            this.buttonNewCatefory.UseVisualStyleBackColor = true;
+            this.buttonNewPodcast.Click += new System.EventHandler(this.ButtonNewPodcast_Click);
             // 
             // Podcast
             // 
@@ -250,6 +293,11 @@
         private System.Windows.Forms.Button buttonDeleteCategory;
         private System.Windows.Forms.Button buttonSaveCategory;
         private System.Windows.Forms.Button buttonNewCatefory;
+        private System.Windows.Forms.ListView listViewPodcast;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
