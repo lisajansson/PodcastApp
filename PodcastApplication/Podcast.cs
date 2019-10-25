@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -26,8 +25,6 @@ namespace PodcastApplication
 
             try
             {
-                //if (File.Exists(url) ? "File exists." : "File does not exist.") ;
-                //{                
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
 
                 var response = (HttpWebResponse)httpRequest.GetResponse();
@@ -42,19 +39,16 @@ namespace PodcastApplication
                 xmlDoc.Load(stream);
 
                 // Sparar XML filen med det nya värdet
-                xmlDoc.Save("Podcast.xml");
+                xmlDoc.Save("podcast.xml");
 
-                // Stänger streamen,motorvägen
+                // Stänger streamen, motorvägen
                 stream.Close();
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine("Något gick fel!");
             }
         }
-        
-        
 
         private void ButtonSavePodcast_Click(object sender, EventArgs e)
         {
