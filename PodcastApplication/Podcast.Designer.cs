@@ -48,8 +48,9 @@
             this.comboBoxFrekvens = new System.Windows.Forms.ComboBox();
             this.buttonDeletePodcast = new System.Windows.Forms.Button();
             this.buttonSavePodcast = new System.Windows.Forms.Button();
-            this.listBoxPodcast = new System.Windows.Forms.ListBox();
             this.buttonNewPodcast = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listViewPodcast);
             this.panel1.Controls.Add(this.buttonDeleteCategory);
             this.panel1.Controls.Add(this.buttonSaveCategory);
@@ -82,7 +85,6 @@
             this.panel1.Controls.Add(this.comboBoxFrekvens);
             this.panel1.Controls.Add(this.buttonDeletePodcast);
             this.panel1.Controls.Add(this.buttonSavePodcast);
-            this.panel1.Controls.Add(this.listBoxPodcast);
             this.panel1.Controls.Add(this.buttonNewPodcast);
             this.panel1.Controls.Add(this.labelPodcast);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -100,7 +102,7 @@
             this.listViewPodcast.HideSelection = false;
             this.listViewPodcast.Location = new System.Drawing.Point(29, 89);
             this.listViewPodcast.Name = "listViewPodcast";
-            this.listViewPodcast.Size = new System.Drawing.Size(603, 164);
+            this.listViewPodcast.Size = new System.Drawing.Size(603, 137);
             this.listViewPodcast.TabIndex = 19;
             this.listViewPodcast.UseCompatibleStateImageBehavior = false;
             this.listViewPodcast.View = System.Windows.Forms.View.Details;
@@ -165,7 +167,7 @@
             this.listBoxCategory.ItemHeight = 16;
             this.listBoxCategory.Location = new System.Drawing.Point(665, 89);
             this.listBoxCategory.Name = "listBoxCategory";
-            this.listBoxCategory.Size = new System.Drawing.Size(361, 164);
+            this.listBoxCategory.Size = new System.Drawing.Size(361, 132);
             this.listBoxCategory.TabIndex = 13;
             // 
             // label3
@@ -241,15 +243,6 @@
             this.buttonSavePodcast.UseVisualStyleBackColor = true;
             this.buttonSavePodcast.Click += new System.EventHandler(this.ButtonSavePodcast_Click);
             // 
-            // listBoxPodcast
-            // 
-            this.listBoxPodcast.FormattingEnabled = true;
-            this.listBoxPodcast.ItemHeight = 16;
-            this.listBoxPodcast.Location = new System.Drawing.Point(29, 89);
-            this.listBoxPodcast.Name = "listBoxPodcast";
-            this.listBoxPodcast.Size = new System.Drawing.Size(603, 164);
-            this.listBoxPodcast.TabIndex = 2;
-            // 
             // buttonNewPodcast
             // 
             this.buttonNewPodcast.Location = new System.Drawing.Point(292, 314);
@@ -259,6 +252,28 @@
             this.buttonNewPodcast.Text = "Ny...";
             this.buttonNewPodcast.UseVisualStyleBackColor = true;
             this.buttonNewPodcast.Click += new System.EventHandler(this.ButtonNewPodcast_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(288, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Uppdateringsfrekvens:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(470, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Kategori:";
             // 
             // Podcast
             // 
@@ -282,7 +297,6 @@
         private System.Windows.Forms.ComboBox comboBoxFrekvens;
         private System.Windows.Forms.Button buttonDeletePodcast;
         private System.Windows.Forms.Button buttonSavePodcast;
-        private System.Windows.Forms.ListBox listBoxPodcast;
         private System.Windows.Forms.Button buttonNewPodcast;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxURL;
@@ -298,6 +312,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }
 
