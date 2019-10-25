@@ -3,19 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodcastApplication", "PodcastApplication\PodcastApplication.csproj", "{058B1DA8-1A70-4224-BFC9-8748DC15B152}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentaion Layer", "PodcastApplication\Presentaion Layer.csproj", "{058B1DA8-1A70-4224-BFC9-8748DC15B152}"
 	ProjectSection(ProjectDependencies) = postProject
 		{00FCA252-99BA-433A-967E-5F21D78613EF} = {00FCA252-99BA-433A-967E-5F21D78613EF}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{00FCA252-99BA-433A-967E-5F21D78613EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buisness Logic Layer", "Logic\Buisness Logic Layer.csproj", "{00FCA252-99BA-433A-967E-5F21D78613EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{FE82CEF8-4413-40C6-ADED-FD628BFB05B2}"
-	ProjectSection(ProjectDependencies) = postProject
-		{00FCA252-99BA-433A-967E-5F21D78613EF} = {00FCA252-99BA-433A-967E-5F21D78613EF}
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DL", "DL", "{C67FBBA8-8487-4A6B-8A6A-CF56995EADDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{7A25E20B-6B12-457B-8D4C-9670C44CF2C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +26,10 @@ Global
 		{00FCA252-99BA-433A-967E-5F21D78613EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00FCA252-99BA-433A-967E-5F21D78613EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00FCA252-99BA-433A-967E-5F21D78613EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE82CEF8-4413-40C6-ADED-FD628BFB05B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE82CEF8-4413-40C6-ADED-FD628BFB05B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE82CEF8-4413-40C6-ADED-FD628BFB05B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE82CEF8-4413-40C6-ADED-FD628BFB05B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A25E20B-6B12-457B-8D4C-9670C44CF2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A25E20B-6B12-457B-8D4C-9670C44CF2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A25E20B-6B12-457B-8D4C-9670C44CF2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A25E20B-6B12-457B-8D4C-9670C44CF2C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
