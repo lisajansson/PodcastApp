@@ -14,6 +14,8 @@ namespace PodcastApplication
 {
     public partial class Podcast : Form
     {
+        private int index;
+
         public Podcast()
         {
             InitializeComponent();
@@ -53,5 +55,96 @@ namespace PodcastApplication
         private void ButtonSavePodcast_Click(object sender, EventArgs e)
         {
         }
+
+
+
+
+        private void buttonNewCatefory_Click(object sender, EventArgs e)
+        {
+
+            textBoxCategory.AppendText(string.Join(",", new string[] { }));
+
+            if (!string.IsNullOrEmpty(textBoxCategory.Text))
+            {
+                comboBoxCategory.Items.Add(textBoxCategory.Text);
+                listBoxCategory.Items.Add(textBoxCategory.Text);
+                textBoxCategory.Clear();
+                MessageBox.Show("En ny kategori har lagts till!");
+            }
+            else
+            {
+                MessageBox.Show("Fältet får inte vara tomt!");
+            }
+        }
+
+        private void buttonSaveCategory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedItem = listBoxCategory.SelectedIndex;
+                listBoxCategory.Items.RemoveAt(selectedItem);
+                comboBoxCategory.Items.RemoveAt(selectedItem);
+                listBoxCategory.Items.Insert(selectedItem, textBoxCategory.Text);
+                comboBoxCategory.Items.Insert(selectedItem, textBoxCategory.Text);
+                textBoxCategory.Clear();
+            }
+            catch { }
+        }
+
+        private void buttonDeletePodcast_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCategory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteCategory_Click(object sender, EventArgs e)
+        {
+            int selectedCategory = listBoxCategory.SelectedIndex;
+            listBoxCategory.Items.RemoveAt(selectedCategory);
+            comboBoxCategory.Items.RemoveAt(selectedCategory);
+            comboBoxCategory.Text = "";
+            textBoxCategory.Clear();
+        }
+
+        private void listBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxCategory.Text = listBoxCategory.SelectedItem.ToString();
+            }
+            catch { }
+
+
+        }
+
+        private void comboBoxFrekvens_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //* comboBoxCategory.Items.Insert("Varannan minut...";
+            }
+            catch { }
+        }
     }
 }
+
+
+            
+            
+
+        
+    
